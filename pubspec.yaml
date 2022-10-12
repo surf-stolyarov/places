@@ -1,0 +1,65 @@
+name: places
+description: Проект Places.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^1.1.5
+  surf_lint_rules: ^1.5.0
+
+dev_dependencies:
+  dart_code_metrics: ^4.18.3
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - res/
+
+  fonts:
+   - family: Roboto
+     fonts:
+       - asset: fonts/Roboto/Roboto-Black.ttf
+         weight: 900
+       - asset: fonts/Roboto/Roboto-BlackItalic.ttf
+         weight: 900
+         style: italic
+       - asset: fonts/Roboto/Roboto-Bold.ttf
+         weight: 700
+       - asset: fonts/Roboto/Roboto-BoldItalic.ttf
+         weight: 700
+         style: italic
+       - asset: fonts/Roboto/Roboto-Medium.ttf
+         weight: 500
+       - asset: fonts/Roboto/Roboto-MediumItalic.ttf
+         weight: 500
+         style: italic
+       - asset: fonts/Roboto/Roboto-Regular.ttf
+         weight: 400
+       - asset: fonts/Roboto/Roboto-Italic.ttf
+         weight: 400
+         style: italic
+       - asset: fonts/Roboto/Roboto-Light.ttf
+         weight: 300
+       - asset: fonts/Roboto/Roboto-LightItalic.ttf
+         weight: 300
+         style: italic
+       - asset: fonts/Roboto/Roboto-Thin.ttf
+         weight: 100
+       - asset: fonts/Roboto/Roboto-ThinItalic.ttf
+         weight: 100
+         style: italic
+
+  module:
+    androidX: true
+    androidPackage: com.example.places
+    iosBundleIdentifier: com.example.places
