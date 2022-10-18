@@ -16,9 +16,7 @@ class VisitingAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Center(
           child: Text(
             Constants.appBarVisitingTitle,
-            style: AppTypography.headline4.copyWith(
-              color: Color(0xFF252849),
-            ),
+            style: Theme.of(context).textTheme.headline4,
           ),
         ),
       ),
@@ -30,21 +28,12 @@ class VisitingAppBar extends StatelessWidget implements PreferredSizeWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 16),
               child: Container(
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(40)),
-                  color: Color(0xFFF5F5F5),
+                  color: Theme.of(context).cardColor,
                 ),
-                child: TabBar(
-                  labelColor: Color(0xFFFFFFFF),
-                  unselectedLabelColor: Color(0xFF7C7E92),
-                  labelStyle: AppTypography.headline5.copyWith(
-                    color: Color(0xFF252849),
-                  ),
-                  indicator: const BoxDecoration(
-                    color: Color(0xFF3B3E5B),
-                    borderRadius: BorderRadius.all(Radius.circular(40)),
-                  ),
-                  tabs: const [
+                child: const TabBar(
+                  tabs: [
                     Tab(text: 'Хочу посетить'),
                     Tab(text: 'Посетил'),
                   ],

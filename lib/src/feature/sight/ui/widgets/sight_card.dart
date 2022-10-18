@@ -3,8 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:places/src/common/widgets/image_loader.dart';
 import 'package:places/src/feature/sight/data/models/sight.dart';
 import 'package:places/src/res/assets.dart';
-import 'package:places/src/res/colors.dart';
-import 'package:places/src/res/typography.dart';
 
 class BuildCardScreen extends StatelessWidget {
   final List<Sight> sights;
@@ -87,10 +85,7 @@ class _SightCardPlaceType extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       sight.type.toLowerCase(),
-      style: AppTypography.headline5.copyWith(
-        fontWeight: FontWeight.w700,
-        color: Colors.white,
-      ),
+      style: Theme.of(context).textTheme.button,
     );
   }
 }
@@ -146,9 +141,9 @@ class _CardTextContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: const BoxDecoration(
-        color: AppColors.mainColor,
-        borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+        color: Theme.of(context).secondaryHeaderColor,
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(16),
           bottomRight: Radius.circular(16),
         ),
@@ -156,39 +151,28 @@ class _CardTextContent extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
       child: Align(
         alignment: Alignment.centerLeft,
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(
-            maxWidth: 173,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 16,
-              ),
-              Text(
-                sight.name,
-                style: AppTypography.headline4.copyWith(
-                  fontWeight: FontWeight.w500,
-                  color: AppColors.secondaryColor,
-                ),
-                overflow: TextOverflow.ellipsis,
-                maxLines: 2,
-              ),
-              const SizedBox(
-                height: 2,
-              ),
-              Text(
-                sight.details,
-                style: AppTypography.headline5.copyWith(
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.tertiaryColor,
-                ),
-                overflow: TextOverflow.ellipsis,
-                maxLines: 2,
-              ),
-            ],
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 16,
+            ),
+            Text(
+              sight.name,
+              style: Theme.of(context).textTheme.headline4,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+            ),
+            const SizedBox(
+              height: 2,
+            ),
+            Text(
+              sight.details,
+              style: Theme.of(context).textTheme.bodyText2,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+            ),
+          ],
         ),
       ),
     );

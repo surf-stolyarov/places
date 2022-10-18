@@ -88,10 +88,7 @@ class _SightCardPlaceType extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       sight.type.toLowerCase(),
-      style: AppTypography.headline5.copyWith(
-        fontWeight: FontWeight.w700,
-        color: Colors.white,
-      ),
+      style: Theme.of(context).textTheme.headline5,
     );
   }
 }
@@ -166,9 +163,9 @@ class _CardTextContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: const BoxDecoration(
-        color: AppColors.mainColor,
-        borderRadius: BorderRadius.only(
+      decoration: BoxDecoration(
+        color: Theme.of(context).secondaryHeaderColor,
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(16),
           bottomRight: Radius.circular(16),
         ),
@@ -184,10 +181,7 @@ class _CardTextContent extends StatelessWidget {
             ),
             Text(
               sight.name,
-              style: AppTypography.headline4.copyWith(
-                fontWeight: FontWeight.w500,
-                color: AppColors.secondaryColor,
-              ),
+              style: Theme.of(context).textTheme.headline4,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
             ),
@@ -213,10 +207,7 @@ class _CardTextContent extends StatelessWidget {
             ),
             Text(
               Constants.clousedBefore(sight.clousedBefore),
-              style: AppTypography.headline5.copyWith(
-                fontWeight: FontWeight.w400,
-                color: AppColors.quaternaryColor,
-              ),
+              style: Theme.of(context).textTheme.headline5,
             ),
           ],
         ),
