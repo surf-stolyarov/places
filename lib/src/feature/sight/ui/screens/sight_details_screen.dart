@@ -51,9 +51,7 @@ class SightDetailsScreen extends StatelessWidget {
                     ),
                     Text(
                       sight.name,
-                      style: AppTypography.headline2.copyWith(
-                        color: AppColors.primaryColor,
-                      ),
+                      style: Theme.of(context).textTheme.headline2,
                     ),
                     const SizedBox(
                       height: 2,
@@ -62,20 +60,14 @@ class SightDetailsScreen extends StatelessWidget {
                       children: [
                         Text(
                           sight.type.toLowerCase(),
-                          style: AppTypography.headline5.copyWith(
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.primaryColor,
-                          ),
+                          style: Theme.of(context).textTheme.headline5,
                         ),
                         const SizedBox(
                           width: 16,
                         ),
                         Text(
                           Constants.clousedBefore(sight.clousedBefore),
-                          style: AppTypography.headline5.copyWith(
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.quaternaryColor,
-                          ),
+                          style: Theme.of(context).textTheme.bodyText2,
                         ),
                       ],
                     ),
@@ -84,20 +76,14 @@ class SightDetailsScreen extends StatelessWidget {
                     ),
                     Text(
                       sight.details,
-                      style: AppTypography.headline5.copyWith(
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.secondaryColor,
-                      ),
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
                     const SizedBox(
                       height: 24,
                     ),
                     PrimaryButton(
                       text: Constants.buildRouteText.toUpperCase(),
-                      textStyle: AppTypography.headline5.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      textStyle: Theme.of(context).textTheme.button,
                       icon: AppAssets.icGo,
                       iconColor: Colors.white,
                       onTap: () {
@@ -107,7 +93,9 @@ class SightDetailsScreen extends StatelessWidget {
                     const SizedBox(
                       height: 24,
                     ),
-                    const Divider(),
+                    const Divider(
+                      color: AppColors.dividerColor,
+                    ),
                     const SizedBox(
                       height: 8,
                     ),
@@ -115,24 +103,24 @@ class SightDetailsScreen extends StatelessWidget {
                       children: [
                         SecondaryButton(
                           text: Constants.scheduleText,
-                          textStyle: AppTypography.headline5.copyWith(
-                            color: AppColors.quaternaryColor,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          textStyle: Theme.of(context).textTheme.bodyText2,
                           icon: AppAssets.icCalendar,
-                          iconColor: AppColors.quaternaryColor,
+                          iconColor: Theme.of(context)
+                              .buttonTheme
+                              .colorScheme
+                              ?.secondary,
                           onTap: () {
                             debugPrint('Действие');
                           },
                         ),
                         SecondaryButton(
                           text: Constants.addFavoriteText,
-                          textStyle: AppTypography.headline5.copyWith(
-                            color: AppColors.secondaryColor,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          textStyle: Theme.of(context).textTheme.bodyText1,
                           icon: AppAssets.icHeart,
-                          iconColor: AppColors.secondaryColor,
+                          iconColor: Theme.of(context)
+                              .buttonTheme
+                              .colorScheme
+                              ?.primary,
                           onTap: () {
                             debugPrint('Действие');
                           },

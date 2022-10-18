@@ -4,6 +4,7 @@ import 'package:places/src/common/constants/constants.dart';
 import 'package:places/src/feature/sight/ui/screens/sight_list_screen.dart';
 import 'package:places/src/feature/sight/ui/screens/visiting_screen.dart';
 import 'package:places/src/feature/sight/ui/screens/sight_details_screen.dart';
+import 'package:places/src/res/themes.dart';
 
 void main() => runApp(const App());
 
@@ -14,9 +15,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: Constants.appName,
-      theme: ThemeData(
-        fontFamily: 'Roboto',
-      ),
+      theme: darkThemeData,
       home: const SightListScreen(),
       // home: const VisitingScreen(),
       // home: SightDetailsScreen(sight: mocks.first),

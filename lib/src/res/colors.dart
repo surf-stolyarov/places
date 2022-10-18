@@ -4,13 +4,21 @@ class AppColors {
   const AppColors._();
 
   // ignore: member-ordering-extended
-  static const mainColor = Color.fromRGBO(245, 245, 245, 1);
+  static const Color mainColor = Color(0xFFF5F5F5);
   // ignore: member-ordering-extended
-  static const primaryColor = Color.fromRGBO(37, 40, 73, 1);
+  static const Color primaryColor = Color(0xFF252849);
   // ignore: member-ordering-extended
-  static const secondaryColor = Color.fromRGBO(59, 62, 91, 1);
+  static const Color secondaryColor = Color(0xFF3B3E5B);
   // ignore: member-ordering-extended
-  static const tertiaryColor = Color.fromRGBO(124, 126, 146, 1);
+  static const Color tertiaryColor = Color(0xFF7C7E92);
   // ignore: member-ordering-extended
-  static const quaternaryColor = Color.fromRGBO(124, 126, 146, 0.56);
+  static const Color quaternaryColor = Color.fromRGBO(124, 126, 146, 0.56);
+
+  // ignore: member-ordering-extended
+  static const Color dividerColor = Color.fromRGBO(124, 126, 146, 0.56);
+
+  // ignore: member-ordering-extended
+  static const Color darkBgColor = Color(0xFF21222C);
+  // ignore: member-ordering-extended
+  static const Color secondaryDarkBgColor = Color(0xFF1A1A20);
 }

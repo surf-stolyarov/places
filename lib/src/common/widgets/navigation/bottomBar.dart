@@ -13,12 +13,12 @@ class BottomBar extends StatelessWidget {
     return BottomNavigationBar(
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      currentIndex: 1,
+      currentIndex: 2,
       items: [
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             AppAssets.icList,
-            color: AppColors.primaryColor,
+            color: Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
             height: 24,
             width: 24,
           ),
@@ -27,7 +27,8 @@ class BottomBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             AppAssets.icMap,
-            color: AppColors.primaryColor,
+            color:
+                Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
             height: 24,
             width: 24,
           ),
@@ -36,7 +37,8 @@ class BottomBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             AppAssets.icHeartSold,
-            color: AppColors.primaryColor,
+            color:
+                Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
             height: 24,
             width: 24,
           ),
@@ -45,7 +47,8 @@ class BottomBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             AppAssets.icSettings,
-            color: AppColors.primaryColor,
+            color:
+                Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
             height: 24,
             width: 24,
           ),
